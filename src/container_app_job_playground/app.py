@@ -7,7 +7,6 @@ from datetime import timedelta
 
 from pytimeparse2 import parse
 
-logging.basicConfig(level=logging.INFO, format="%(asctime)s - %(message)s")
 logger = logging.getLogger(__name__)
 
 
@@ -32,7 +31,6 @@ def parse_duration(duration_str: str) -> int | None:
 
 
 def run_logging(seconds: int) -> None:
-    """Business logic: logol az adott ideig."""
     logger.info(f"Logging for {seconds} seconds...")
     for _ in range(seconds):
         logger.info("tikk")
@@ -40,7 +38,8 @@ def run_logging(seconds: int) -> None:
 
 
 def main() -> None:
-    """CLI entry point: parse-ol és meghívja a business logikát."""
+    logging.basicConfig(level=logging.INFO, format="%(asctime)s - %(message)s")
+
     parser = create_parser()
     args = parser.parse_args()
     seconds = parse_duration(args.duration)

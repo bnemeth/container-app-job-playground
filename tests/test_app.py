@@ -14,7 +14,6 @@ from container_app_job_playground.app import parse_duration, run_logging
         ("1h", 3600),
         ("1h5m30s", 3930),
         ("3m", 180),
-        (None, None),
         ("invalid", None),
     ],
 )

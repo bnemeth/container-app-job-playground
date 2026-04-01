@@ -12,8 +12,9 @@ COPY src ./src
 # Install dependencies with uv
 RUN uv sync
 
-# Set default duration to 10s if not provided
+# Set default duration to 60s if not provided
 ENV DURATION=60s
 
 # Run the application with the duration parameter
-ENTRYPOINT ["sh", "-c", "uv run python -m container_app_job_playground --duration $DURATION"]
+ENTRYPOINT ["uv", "run", "python", "-m", "container_app_job_playground"]
+CMD ["--duration", "60s"]
