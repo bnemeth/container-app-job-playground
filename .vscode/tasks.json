@@ -1,0 +1,19 @@
+{
+    "version": "2.0.0",
+    "tasks": [
+        {
+            "label": "Test with coverage",
+            "type": "shell",
+            "command": "uv run pytest --cov=src --cov-report=xml:coverage.xml",
+            "group": {
+                "kind": "test",
+                "isDefault": true
+            },
+            "presentation": {
+                "reveal": "always",
+                "panel": "shared"
+            },
+            "problemMatcher": []
+        }
+    ]
+}

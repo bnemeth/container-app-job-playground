@@ -1,0 +1,28 @@
+[project]
+name = "vscode-single-library-template"
+version = "0.1.0"
+description = "Add your description here"
+readme = "README.md"
+authors = [
+    { name = "Balazs", email = "nemeth.balazs.vince@gmail.com" }
+]
+requires-python = ">=3.13"
+dependencies = []
+
+[project.scripts]
+vscode-single-library-template = "vscode_single_library_template:main"
+
+[build-system]
+requires = ["uv_build>=0.9.22,<0.10.0"]
+build-backend = "uv_build"
+
+[tool.ruff]
+line-length = 120
+
+[dependency-groups]
+dev = [
+    "ipykernel>=7.2.0",
+    "pytest>=9.0.2",
+    "pytest-cov>=7.0.0",
+    "ruff>=0.15.2",
+]

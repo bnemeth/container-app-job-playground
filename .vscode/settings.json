@@ -1,0 +1,56 @@
+{
+    "python.defaultInterpreterPath": "${workspaceFolder}/.venv/bin/python",
+    "python.analysis.typeCheckingMode": "standard",
+    // Azokat a file-okat is vizsgálja, amik nincsenek megnyitva
+    "python.analysis.diagnosticMode": "workspace",
+    // Csak src és tests kerüljön elemzésre
+    "python.analysis.include": [
+        "src",
+        "tests"
+    ],
+    "editor.rulers": [
+        120
+    ],
+    // Mindig fusson le a coverage is
+    "python.testing.pytestArgs": [
+        "tests",
+        "--cov=src",
+        "--cov-report=xml:coverage.xml"
+    ],
+    "python.analysis.extraPaths": [
+        "./src"
+    ],
+    "python.testing.unittestEnabled": false,
+    "python.testing.pytestEnabled": true,
+    "files.exclude": {
+        "**/__pycache__": true,
+        "**/.pytest_cache": true
+    },
+    // Copilot: Next Edit Suggestions (INSIDERS)
+    "github.copilot.nextEditSuggestions.enabled": true,
+    // Terminál: shell integration (exit code, command tracking, stb.)
+    "terminal.integrated.shellIntegration.enabled": true,
+    "breadcrumbs.enabled": true,
+    // Automatikus mentés idő után
+    "files.autoSave": "afterDelay",
+    // Ruff formatter + import rendezés mentéskor
+    "[python]": {
+        "editor.defaultFormatter": "charliermarsh.ruff",
+        "editor.codeActionsOnSave": {
+            "source.organizeImports.ruff": "explicit"
+        }
+    },
+    // Formázás mentéskor (fájlok + notebookok)
+    "editor.formatOnSave": true,
+    "notebook.formatOnSave.enabled": true,
+    "notebook.codeActionsOnSave": {
+        "source.organizeImports.ruff": "explicit"
+    },
+    "sonarlint.connectedMode.project": {
+        "connectionId": "bnemeth",
+        "projectKey": "bnemeth_vscode-single-library-template"
+    },
+    "coverage-gutters.coverageFileNames": [
+        "coverage.xml"
+    ]
+}

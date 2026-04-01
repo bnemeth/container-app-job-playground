@@ -1,0 +1,8 @@
+{
+    "recommendations": [
+        "charliermarsh.ruff",
+        "ryanluker.vscode-coverage-gutters",
+        "sonarsource.sonarlint-vscode",
+        "ms-toolsai.jupyter"
+    ]
+}
