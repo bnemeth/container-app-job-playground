@@ -31,9 +31,6 @@ def test_run_logging(seconds):
     ):
         run_logging(seconds)
 
-        # Ellenőrizni hogy pontosan 'seconds' alkalommal hívták meg az info-t
-        # +1 az intro üzenetért ("Logging for X seconds...")
         assert mock_logger.info.call_count == seconds + 1
 
-        # Ellenőrizni hogy sleep hívták meg
         assert mock_sleep.call_count == seconds
