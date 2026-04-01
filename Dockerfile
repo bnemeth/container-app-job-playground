@@ -16,5 +16,4 @@ RUN uv sync
 ENV DURATION=60s
 
 # Run the application with the duration parameter
-ENTRYPOINT ["uv", "run", "python", "-m", "container_app_job_playground"]
-CMD ["--duration", "60s"]
+ENTRYPOINT ["sh", "-c", "uv run python -m container_app_job_playground --duration $DURATION"]
